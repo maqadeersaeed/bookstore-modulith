@@ -1,0 +1,28 @@
+app:
+  jwt:
+    secret: ${JWT_SECRET}
+
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 20        # depends on DB max_connections
+      minimum-idle: 10
+      idle-timeout: 600000         # 10 min
+      max-lifetime: 1800000        # 30 min (less than PG's idle timeout)
+      connection-timeout: 30000    # 30 sec
+
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+logging:
+  level:
+    root: INFO
+    org.springframework.security: INFO
+    org.springframework.web: INFO
+    com.qadeersaeed.bookstore: INFO
