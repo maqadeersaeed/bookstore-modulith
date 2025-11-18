@@ -1,4 +1,5 @@
 name: Book Store (DEV) Flows Pipeline
+
 on:
   push:
     branches:
@@ -6,5 +7,13 @@ on:
   pull_request:
     branches:
       - master
+
 env:
   APP_NAME: bookstore-modulith-app
+
+jobs:
+  dummy-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do nothing
+        run: echo "Pipeline completed (dummy job)"
