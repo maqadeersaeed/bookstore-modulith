@@ -1,0 +1,10 @@
+name: Book Store (DEV) Flows Pipeline
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+env:
+  APP_NAME: bookstore-modulith-app
