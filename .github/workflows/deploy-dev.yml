@@ -2,9 +2,9 @@ name: Book Store (DEV) Flows Pipeline
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 env:
   APP_NAME: bookstore-modulith-app
